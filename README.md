@@ -6,14 +6,15 @@
 
 Internet retail, also known as **e-commerce**, is the largest sector of the electronics industry, generating an estimated $29 trillion in 2019. E-commerce platforms like Shopify and WooCommerce provide a suite of services to businesses of all sizes. Due to their prevalence, understanding the fundamental architecture of these platforms will benefit you as a full-stack web developer.
 
-This project is the back end for a generic e-commerce site using one-to-many and many-to-many database relationships with Sequelize and MySQL. 
+This project is the back end for a generic e-commerce site using one-to-many and many-to-many database relationships with Sequelize and MySQL.
 
 The technologies used in this application are:
-* [Node.js](https://nodejs.org/en/)
-* [Express.js](https://expressjs.com/) to run the web server
-* [MySQL](https://www.mysql.com/) to store the data
-* [Sequelize](https://sequelize.org) to connect to the MySQL database from Node.js
-* [dotenv](https://www.npmjs.com/package/dotenv) to store environmental variables 
+
+- [Node.js](https://nodejs.org/en/)
+- [Express.js](https://expressjs.com/) to run the web server
+- [MySQL](https://www.mysql.com/) to store the data
+- [Sequelize](https://sequelize.org) to connect to the MySQL database from Node.js
+- [dotenv](https://www.npmjs.com/package/dotenv) to store environmental variables
 
 ### User Story
 
@@ -63,13 +64,15 @@ The application will be invoked by using the following command:
 node server.js
 ```
 
-As there is no public-facing views in this project, the user will need to consume the apis using a tool like [Insomnia](https://insomnia.rest/).  The api endpoints are:
+As there is no public-facing views in this project, the user will need to consume the apis using a tool like [Insomnia](https://insomnia.rest/). The api endpoints are:
 
 ![Screenshot1](./assets/images/screenshot1.png)
 
 ### Video
 
-[VideoLink](TODO)
+[WEBM Video Link](https://drive.google.com/file/d/1pQn7x_QwBq3fPjWPo1BNOVGSnG-IPg8a/view)
+
+[MP4 Video Link](https://drive.google.com/file/d/1f2z4LFM_rUjYkcGqCCNSwPBrysbIOocV/view?usp=sharing)
 
 ## License
 
