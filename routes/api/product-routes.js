@@ -3,10 +3,10 @@ const { Product, Category, Tag, ProductTag } = require("../../models");
 
 // The `/api/products` endpoint
 
-// get all products
+/**
+ * Find all products including its associated Category and Tag data
+ */
 router.get("/", async (req, res) => {
-  // find all products
-  // be sure to include its associated Category and Tag data
   try {
     const data = await Product.findAll({
       include: [{ model: Category }, { model: Tag }],
@@ -23,10 +23,10 @@ router.get("/", async (req, res) => {
   }
 });
 
-// get one product
+/**
+ * Find a single product by its `id` including its associated Category and Tag data
+ */
 router.get("/:id", async (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
   try {
     const data = await Product.findByPk(req.params.id, {
       include: [{ model: Category }, { model: Tag }],
@@ -43,17 +43,18 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// create new product
+/**
+ * Create a new product.
+ * The Request body should look like this:
+ * {
+ *    product_name: "Basketball",
+ *    price: 200.00,
+ *    stock: 3,
+ *    category_id: 1, // The starter code forgot this field
+ *    tagIds: [1, 2, 3, 4] // I deleted id 1.  Use 9 instead.
+ * }
+ */
 router.post("/", (req, res) => {
-  /* req.body should look like this...
-    {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      category_id: 1, // The starter code forgot this field
-      tagIds: [1, 2, 3, 4] // I deleted id 1.  Use 9 instead.
-    }
-  */
   Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
@@ -76,9 +77,19 @@ router.post("/", (req, res) => {
     });
 });
 
-// update product
+/**
+ * Update a prduct.
+ * The Request body should include at least one of the following fields:
+ * {
+ *    product_name: "Basketball",
+ *    price: 200.00,
+ *    stock: 3,
+ *    category_id: 1, // The starter code forgot this field
+ *    tagIds: [1, 2, 3, 4] // I deleted id 1.  Use 9 instead.
+ * }
+ */
 router.put("/:id", async (req, res) => {
-  // Note to grader: The provided code only works if the request includes new Tag IDs.  I'm refactoring the code to allow the user to update the product without changing the tags if they're not sent in the request.  Also, if a product had no tags to begin with, the provided code would not add new tags that were sent in.
+  // Note to grader: The provided starter code only works if the request body includes new Tag IDs.  I'm refactoring the code to allow the user to update the product without changing the tags if they're not sent in the request.
 
   try {
     const product = await Product.update(req.body, {
@@ -114,8 +125,10 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+/**
+ * Delete one product by its `id` value
+ */
 router.delete("/:id", async (req, res) => {
-  // delete one product by its `id` value
   try {
     const data = await Product.destroy({
       where: {
