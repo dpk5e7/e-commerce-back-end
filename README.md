@@ -6,9 +6,14 @@
 
 Internet retail, also known as **e-commerce**, is the largest sector of the electronics industry, generating an estimated $29 trillion in 2019. E-commerce platforms like Shopify and WooCommerce provide a suite of services to businesses of all sizes. Due to their prevalence, understanding the fundamental architecture of these platforms will benefit you as a full-stack web developer.
 
-Your task is to build the back end for an e-commerce site by modifying starter code. You’ll configure a working Express.js API to use Sequelize to interact with a MySQL database.
+This project is the back end for a generic e-commerce site using one-to-many and many-to-many database relationships with Sequelize and MySQL. 
 
-Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality and all of the acceptance criteria being met. You’ll need to submit a link to the video and add it to the readme of your project.
+The technologies used in this application are:
+* [Node.js](https://nodejs.org/en/)
+* [Express.js](https://expressjs.com/) to run the web server
+* [MySQL](https://www.mysql.com/) to store the data
+* [Sequelize](https://sequelize.org) to connect to the MySQL database from Node.js
+* [dotenv](https://www.npmjs.com/package/dotenv) to store environmental variables 
 
 ### User Story
 
@@ -40,7 +45,6 @@ THEN I am able to successfully create, update, and delete data in my database
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
@@ -59,11 +63,11 @@ The application will be invoked by using the following command:
 node server.js
 ```
 
-### Screenshots
+As there is no public-facing views in this project, the user will need to consume the apis using a tool like [Insomnia](https://insomnia.rest/).  The api endpoints are:
 
-![Screenshot1](TODO)
+![Screenshot1](./assets/images/screenshot1.png)
 
-![Screenshot2](TODO)
+### Video
 
 [VideoLink](TODO)
 
@@ -76,10 +80,6 @@ This application is covered under the [MIT License](https://opensource.org/licen
 ## Contributing
 
 As this project is part of an individual assignment for the University of Denver's Coding Bootcamp, it would be inappropriate for anyone else to contribute to this project.
-
-## Tests
-
-TODO
 
 ## Questions
 
