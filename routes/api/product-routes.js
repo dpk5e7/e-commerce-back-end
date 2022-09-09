@@ -51,7 +51,7 @@ router.get("/:id", async (req, res) => {
  *    price: 200.00,
  *    stock: 3,
  *    category_id: 1, // The starter code forgot this field
- *    tagIds: [1, 2, 3, 4] // I deleted id 1.  Use 9 instead.
+ *    tagIds: [1, 2, 3, 4]
  * }
  */
 router.post("/", (req, res) => {
