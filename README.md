@@ -86,6 +86,6 @@ As this project is part of an individual assignment for the University of Denver
 
 ## Questions
 
-GitHub Link: [https://github.com/dpk5e7](https://github.com/dpk5e7)
+GitHub Link: [https://github.com/dpk5e7/e-commerce-back-end](https://github.com/dpk5e7/e-commerce-back-end)
 
 Please contact me at Daniel.Kelly@du.edu with any additional questions you may have.
